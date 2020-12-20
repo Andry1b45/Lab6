@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <meta charset="utf-8">
   <title>Chuck Norris jokes</title>
@@ -9,8 +8,8 @@
       font-size: 120%;
       font-family: Verdana, Arial, Helvetica, sans-serif;
       text-align: center;
-      background: #f46b45; /* fallback for old browsers */
-      background: -webkit-linear-gradient(to right, #f46b45, #eea849); /* Chrome 10-25, Safari 5.1-6 */
+      background: #f46b45;
+      background: -webkit-linear-gradient(to right, #f46b45, #eea849);
       background: linear-gradient(to right, #f46b45, #eea849);
     }
     h1 {
@@ -25,11 +24,9 @@
       font-size: 200%;
       font-style: bold;
     }
-
     img {
       width: 8%;
     }
-
     a {
       color: grey;
       font-style: italic;
@@ -47,14 +44,10 @@
     var header = document.querySelector('header');
     var section = document.querySelector('section');
 
-
-
-
     const data = null;
-
     const xhr = new XMLHttpRequest();
-    xhr.withCredentials = true;
 
+    xhr.withCredentials = true;
     xhr.addEventListener("readystatechange", function() {
       if (this.readyState === this.DONE) {
         var res = JSON.parse(this.response);
@@ -63,12 +56,11 @@
         var id = res.id;
         var url = res.url;
         var value = res.value;
-
         var img = document.createElement("IMG");
+
         img.src = icon_url;
 
-
-        var myArticle = document.createElement('article'); //заповнюємо веб сторінку даними
+        var myArticle = document.createElement('article');
         var myH1 = document.createElement('h1');
         myH1.textContent= "Chuck Norris joke generator";
         myArticle.appendChild(myH1);
@@ -77,13 +69,12 @@
         var myArticle = document.createElement('article');
         var img = document.createElement("IMG");
         var joke = document.createElement('h2');
-
         var a = document.createElement('a');
         var joke_link = document.createTextNode("Link to this joke");
 
         img.src = icon_url;
         joke.textContent = value;
-
+        
         joke_link.title = "link to joke";
         a.appendChild(joke_link);
         a.title = "Link to joke";
