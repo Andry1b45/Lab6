@@ -1,1 +1,0 @@
-Andrew Bershadskyi IS-81
